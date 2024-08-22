@@ -51,17 +51,17 @@ class Member{
     public function borrowBook(Book $book){
        // return $this->book = $book;
         if($book ->borrowBook()){
-            echo $this->name . " has borrowed '" . $book->getTitle() . "'\n";
+            $this->name . " has borrowed '" . $book->getTitle() . "'\n";
     
         } else {
-            echo "No copies available for '" . $book->getTitle() . "'.\n";
+            "No copies available for '" . $book->getTitle() . "'.\n";
         }
 
     }
 
     public function returnBook(Book $book){
         $book->returnBook();
-        echo $this->name . "has returned '" . $book->getTitle() . "'.\n";
+        $this->name . "has returned '" . $book->getTitle() . "'.\n";
 
 
     }
